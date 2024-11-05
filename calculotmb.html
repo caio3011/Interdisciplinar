@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalho</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- FONT MONTSERRAT-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header class="header">
+
+            <!-- LOGO HEADER-->
+            <a href="index.html">
+                <img class= "logo" src="Projeto Inter/logo.png" alt="logo">
+            </a>
+
+    <div class="barraDePesquisa" id="barraDePesquisa"> 
+
+       <!--  <form action="/search" method="get"> <input type="text" placeholder="Pesquisar..." name="Pesquisa"> <button class="botao" type="submit"> Pesquisar </button> </form> -->
+        
+
+    </div>
+
+        <!-- LISTA-->
+    <nav class="menu">
+        <ul>
+            <li class="menu-item">
+                <a href="index.html" class="menu-link active">
+                    <span class="menu-text"> Saúde</span>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="calculotmb.html" class="menu-link active">
+                    <span class="menu-text"> Cálculo TMB</span>
+                </a>
+            </li>
+            <li>
+                <a href="#habitos" class="menu-link active" target="_blank">
+                    <span class="menu-text">Hábitos</span>
+                </a>
+            </li>
+            <li>
+                <a href="#habitos" class="menu-link active" target="_blank">
+                    <span class="menu-text">Hábitos</span>
+                </a>
+            </li>
+            <li>
+                <a href="#habitos" class="menu-link active" target="_blank">
+                    <span class="menu-text">Hábitos</span>
+                </a>
+            </li>
+
+
+        </ul>
+
+
+    </nav>
+
+    </header>
+    
+    <main> 
+       
+        <article>
+    <h1 class="h1Introducao"> <b> O que é Taxa Metabolica Basal?</b></h1>
+    <p class="introducao"> 
+        
+        A Taxa Metabólica Basal (TBM) é a quantidade mínima de energia que o corpo precisa para manter suas funções vitais em repouso como respirar, bombear sangue e manter a temperatura corporal. Ela respresenta o número de calorias que seu corpo queima apenas para "se manter vivo", sem considerar atividades físicas ou digestão. A TMB é influenciada por fatores como:  <br></br>
+
+        <b>Idade:</b> Quanto mais velho menor tende a ser a TMB.<br>
+        <b>Sexo:</b> Homens, geralmente têm uma TMB mais alta que mulheres, devido uma maior massa muscular.<br>
+        <b>Composição corporal:</b> Quanto mais músculos, maior será a TMB, já que músculos consomem mais energia que gordura<br>
+        <b>Genética:</b> Algumas pessoas naturalmente têm uma TMB mais alta ou mais baixa<br></br>
+        
+        Saber sua TMB é útil para definir quantas calorias você precisa ingerir para atingir objetivos como perder peso, ganhar massa muscular ou manter seu peso atual. <br>
+        <figure class="imagem-container">
+            <img src="Projeto Inter/portifoliopessoal.png" alt="">
+        </figure> <br>
+
+        <h1 class="h1Introducao"><b>Cálcule sua TMB</b> </h1>
+
+         <!-- Formulário de entrada de dados -->
+    <div class="tmb-calculator">
+        <!-- Linha com as três primeiras labels -->
+        <div class="input-row">
+            <label>
+                Peso em kg:
+                <input type="number" name="peso" required>
+            </label>
+            <label>
+                Altura em cm:
+                <input type="number" name="altura" required>
+            </label>
+            <label>
+                Idade em anos:
+                <input type="number" name="idade" required>
+            </label>
+        </div>
+
+        <!-- Linha com a quarta label e o botão -->
+        <div class="sexo-botao">
+            <label>
+                Sexo:
+                <select name="sexo" required>
+                    <option value="homem">Homem</option>
+                    <option value="mulher">Mulher</option>
+                </select>
+            </label>
+            <button onclick="calcularTMB()">Calcular</button>
+        </div>
+
+        <!-- Label para exibir o resultado -->
+        <div class="resultado">
+            <label>Sua Taxa Metabólica Basal é: <span id="resultado"></span></label>
+        </div>
+        
+    </div>
+    <script src="js/Main.js"></script>
+
+
+</article>
+        </p>
+        </article>
+        <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+
+    </main>
+
+    <footer>
+        <p>
+            &copy; 2024. Projeto Interdisciplinar da <a href="https://sp.senai.br/unidade/leopoldina/" target="_blank"> Etec.</a>
+            Desenvolvido por <a href="https://github.com/caio3011" target="_blank">  </a>
+        </p>
+    </footer>
+
+</body>
+</html>

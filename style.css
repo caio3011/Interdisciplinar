@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+--text-color: #000000;
+    --link-color: #dedbdbe7;
+    --icon-color: #15ff00;
+}
+body, html {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'montserrat';
+}
+a {
+    text-decoration: none;
+    color: var(--link-color)
+}
+a:hover{
+    color: var(--icon-color);
+}
+
+header {
+
+     display: flex;
+     background: linear-gradient(to right, hsl(122, 67%, 49%), hsl(122, 83%, 27%)  ); 
+     justify-content: space-between;
+     align-items: center; 
+}
+
+.header-link {
+    color: white; /* Cor inicial do link */
+    text-decoration: none; /* Remove sublinhado, se necessário */
+}
+
+/* Cor quando o mouse passa sobre o link específico do header */
+.header-link:hover {
+    color: green; /* Cor ao passar o mouse */
+}
+
+/* Estilo para os demais links, mantendo-os brancos */
+.other-links {
+    color: white; /* Cor inicial dos outros links */
+    text-decoration: none; /* Remove sublinhado, se necessário */
+}
+
+/* Opcional: Manter a cor branca ao passar o mouse nos outros links */
+.other-links:hover {
+    color: white; /* Mantém branco */
+}
+
+.main-content{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.logo {
+    width: 125px;
+    height: 125px;
+    margin: 20px 20px 20px 40px;
+
+}
+
+
+.menu li {
+     display: inline;
+    padding: 10px;
+    cursor: pointer;
+    margin: 0px 40px 0px 0px; 
+}
+
+button {
+    display: inline;
+    padding: 5px;
+    position: relative;
+    margin-left: 325px;
+    border: 1px solid black; 
+    border-radius: 10px;
+    background-color: white; 
+    cursor: pointer;
+}
+
+.introducao {
+    display: inline;
+    margin-right: 20px;
+   
+}
+
+.h1Introducao {
+    text-align: center;
+}
+
+main {
+    margin: 0px 8px 0px 20px;
+} 
+
+.introducao {
+    margin-bottom: 20px; /* Espaçamento entre o texto e a imagem */
+}
+
+.imagem-container {
+    display: flex;
+    justify-content: center; /* Centraliza a imagem */
+    margin: 0 auto;
+    width: 100%; /* Ocupa toda a largura */
+    padding: 0 20px; /* Espaçamento interno para dar margens laterais */
+}
+
+.imagem-container img {
+    width: 100%; /* Faz a imagem ocupar toda a largura do container */
+    max-width: 800px; /* Limite opcional de largura máxima para não esticar demais */
+    border-radius: 8px; /* Borda arredondada, se desejar */
+}
+
+/*  .imgcorrida {
+    width: 600px;
+    height: 300px;
+    display: inline;
+    float: right;
+   position: relative;
+   shape-outside: circle(90%);
+   top: 15px;
+   border-radius: 10px;
+   box-shadow: 1px 1px 10px 1px black; 
+   border: none;
+   
+}  
+ */
+
+ .tmb-calculator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.input-row {
+    display: flex;
+    justify-content: center;
+    gap: 18.5px; /* Espaçamento entre os elementos */
+    margin-bottom: 10px; /* Espaço entre as linhas */
+}
+
+.sexo-botao {
+    display: flex;
+    align-items: center; /* Alinha verticalmente o botão e o select */
+    gap: .5px; /* Espaçamento entre a label Sexo e o botão */
+    margin-bottom: 10px;
+}
+
+
+label {
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+}
+
+input[type="number"],
+select {
+    padding: 5px;
+    margin-top: 5px;
+    width: 100px;
+    text-align: center;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.resultado {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* footer */
+footer {
+    margin-bottom: 5rem;
+}
+footer p {
+    font-size: .875rem;
+    text-align: center;
+    padding: 1rem;
+}
+
+#footer {
+    padding: 30px;
+    background: var(--fundo-escuro);
+    color: var(--texto-titulo);
+    font-size: 16px;
+    position: fixed; 
+    left: 0;
+    bottom: 0;
+    width: 300px;
+    z-index: 9999;   
+}
+#footer .copyright {
+    padding-top: 5px;
+    text-align: center;
+    font-size: 16px;
+    color: var(--texto-titulo   );
+}
+#footer .creditos a {
+    color: var(--fundo-claro);
+}
+
+@media(max-width: 767px){
+    .header {
+       flex-direction: column;
+    }
+}
+
