@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --text-color: #000000;
+    --link-color: #fffefee7;
+    --icon-color: #29d12f;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif; /* Adicionando 'sans-serif' como fallback */
+}
+
+a {
+    text-decoration: none;
+    color: var(--link-color);
+}
+
+a:hover {
+    color: var(--icon-color);
+}
+
+header {
+    display: flex;
+    background: var(--icon-color);
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; /* Espaçamento interno no header */
+    height: 100px;
+}
+
+.logo {
+    width: 125px;
+    height: auto; /* Para manter a proporção da imagem */
+    margin: 10px 140px 100px 140px;
+}
+
+.menu {
+    flex-grow: 1; /* Para expandir a barra de menu */
+    margin-right: 150px;
+}
+
+.menu ul {
+    list-style-type: none; /* Remove marcadores da lista */
+    display: flex; /* Exibe os itens do menu em linha */
+    justify-content: flex-end; /* Alinha os itens à direita */
+}
+
+.menu-item {
+    margin: 0 15px; /* Espaçamento entre os itens do menu */
+}
+
+.introducao {
+    margin-bottom: 20px; /* Espaçamento entre o texto e a imagem */
+}
+
+.h1Introducao {
+    text-align: center;
+}
+
+main {
+    margin: 30px 150px 30px 150px; /* Margens gerais para o main */
+}
+
+.imagem-container {
+    display: flex;
+    justify-content: center; /* Centraliza a imagem */
+    margin: 20px auto; /* Margem superior e inferior */
+    width: 100%;
+    max-width: 800px; /* Largura máxima para imagem */
+}
+
+.imagem-container img {
+    width: 100%;
+    height: auto; /* Mantém a proporção */
+    border-radius: 8px; /* Borda arredondada, se desejar */
+}
+
+.projeto-banner {
+    width: 100%;
+    height: 550px; /* Para manter a proporção */
+    object-fit: cover;
+    margin-bottom: 2rem;
+    border-radius: 2.5rem;
+}
+
+.projetos {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0 .2rem; /* Para o espaçamento lateral da seção */
+}
+
+.projetos-container {
+    display: flex;
+    flex-direction: column; /* Organiza os cards em coluna */
+    gap: 1rem; /* Espaçamento entre os cards */
+}
+
+.projeto-card {
+    display: flex;
+    align-items: center; /* Alinha imagem e texto no card */
+    gap: 1.5rem; /* Espaçamento entre imagem e texto */
+    flex-direction: row; /* Imagem à esquerda, texto à direita */
+}
+
+.cartao {
+    width: 120px; /* Ajusta a largura do cartão */
+    height: auto; /* Mantém a proporção */
+    border-radius: 8px; /* Borda arredondada */
+}
+
+.card-body {
+    flex-grow: 1; /* Faz o corpo do card ocupar o espaço restante */
+}
+
+.card-descricao {
+    margin: 0; /* Remove margem do parágrafo */
+}
+
+.btn {
+    background-color: var(--link-color); /* Cor do botão */
+    color: white; /* Cor do texto no botão */
+    border: none; /* Remove borda padrão */
+    padding: 10px 15px; /* Espaçamento interno do botão */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor em forma de ponteiro */
+}
+
+
+.saiba-mais:hover {
+    background-color: #45a049; /* Cor mais escura ao passar o mouse */
+}
+
+footer {
+    background-color: #29d12f; /* Cor de fundo do rodapé */
+    padding: 20px; /* Espaçamento interno */
+    text-align: center; /* Centraliza o texto no rodapé */
+    position: relative; /* Para posicionamento */
+
+    height: 100px;
+}
+
+footer p {
+    margin: 0; /* Remove margem padrão do parágrafo */
+}
+
+footer img {
+    width: 100px; /* Ajuste a largura da logo no rodapé */
+    height: auto; /* Mantém a proporção */
+}
+
+/* Responsividade */
+@media (min-width: 768px) {
+    .projetos-container {
+        flex-direction: row; /* Muda para linha em telas maiores */
+        flex-wrap: wrap; /* Permite que os cards quebrem para a próxima linha */
+        justify-content: space-between; /* Distribui o espaço entre os cards */
+    }
+
+    .projeto-card {
+        width: calc(50% - 1rem); /* Cada card ocupa 50% da largura menos a margem */
+    }
+}
+
+@media (min-width: 1024px) {
+    .projeto-card {
+        width: calc(33% - 1rem); /* Cada card ocupa 33% da largura em telas ainda maiores */
+    }
+}
