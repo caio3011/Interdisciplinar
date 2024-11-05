@@ -13,3 +13,12 @@ function calcularTMB() {
 
     document.getElementById('resultado').innerText = tmb.toFixed(2) + " kcal";
 }
+
+window.addEventListener("scroll", function () {
+    // Verifica se o usuário chegou ao final da página
+    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+        document.getElementById("footer").style.display = "block"; // Exibe o footer
+    } else {
+        document.getElementById("footer").style.display = "none"; // Oculta o footer
+    }
+});
